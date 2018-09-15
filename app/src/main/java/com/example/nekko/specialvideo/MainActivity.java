@@ -51,7 +51,6 @@ public class MainActivity extends FragmentActivity {
         int blue = ThreadLocalRandom.current().nextInt(0, 255 + 1);
         int myColor = Color.argb(255, red, green, blue);
 
-        // shove our styled text into the Button
         b.setText(text, TextView.BufferType.SPANNABLE);
         b.setBackgroundColor(myColor);
     }
@@ -65,16 +64,12 @@ public class MainActivity extends FragmentActivity {
         if (requestCode == MY_CAMERA_REQUEST_CODE) {
 
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
                 Toast.makeText(this, "camera permission granted", Toast.LENGTH_LONG).show();
-
             } else {
-
                 Toast.makeText(this, "camera permission denied", Toast.LENGTH_LONG).show();
-
             }
-
-        }}//end onRequestPermissionsResult
+        }
+    }
 
     public void startEshkere(View view){
         Intent intent = new Intent(this, Eshkere.class);

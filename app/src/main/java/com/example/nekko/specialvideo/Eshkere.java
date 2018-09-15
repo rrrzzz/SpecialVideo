@@ -127,5 +127,4 @@ public class Eshkere extends FragmentActivity {
         position = savedInstanceState.getInt("CurrentPosition");
         videoView.seekTo(position);
     }
-
 }
